@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>AdChat by Blue Messaging</title>
+    <!-- Chat CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Scrollbar CSS -->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
+
+    <link rel="stylesheet" type="text/css" href="./fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+
+    <script>
+        var links = function (id) {
+            $('.link').click(function (e) {
+                e.preventDefault();
+                parent.displayLink(this);
+                /*
+                parent.$.fancybox({
+                    href: this.href,
+                    autoDimensions: false,
+                    width: 660,
+                    height: 560,
+                    hideOnOverlayClick: false,
+                    enableEscapeButton: false,
+                    overlayColor: '#000',
+                    overlayOpacity: 0.7,
+                    padding: 0,
+                    type: 'iframe',
+                    topRatio: 0
+                }); // fancybox
+                */
+            }); // click
+        };
+
+        var video = function (id) {
+            $('.video').click(function (e) {
+                e.preventDefault();
+                parent.displayVideo(this);
+                /*
+                parent.$.fancybox({
+                    href: this.href,
+                    autoDimensions: true,
+                    hideOnOverlayClick: false,
+                    overlayColor: '#000',
+                    overlayOpacity: 0.7,
+                    padding: 0,
+                    type: 'iframe',
+                    topRatio: 0
+                });
+                */
+            })
+        };
+    </script>
+</head>
+
+<body onload="getOrigin();resize();">
+    <div class="chat_wrapper">
+
+        <div id="chat_box">
+
+            <div id="chat_container">
+
+                <div id="history_div" class="chat_body">
+
+                    <div id="history_mc">
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- //ends chat container -->
+
+            <div id="chat_footer">
+
+                <input id="input_area" class="chat_input_message" placeholder="Escribe tu pregunta aquí" type="text" maxlength="75" onkeypress="chatHandler(event)" disabled>
+
+                <input id="btnSend" type="button" class="send_btn" value="Enviar" onclick="chat()">
+
+            </div>
+            <!-- //end chat footer -->
+
+        </div>
+        <!-- ends chat box -->
+
+    </div>
+    <!-- //ends wrapper//-->
+
+
+    <!-- //starts offline screen -->
+
+    <div id="offline" class="hidden">
+
+        <div class="offline-inner">
+
+            <div class="offline-header">
+
+                <div class="sorry">
+                    <img src="../img/loaderBankaool.gif" alt="Don't Worry!" />
+                </div>
+
+                <h1 class="offline-title">¡Una disculpa!</h1>
+                <h3 class="offline-currently">El servicio <span class="unavailable">no està disponible</span> en este momento</h3>
+                <i>Inténtelo de nuevo más tarde!</i>
+
+                <a href="https://www.bankaool.com" class="btn-redirect">Continue</a>
+
+            </div>
+            <!-- //ends offline link to -->
+
+        </div>
+
+    </div>
+    <!-- Javascript Files-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- //-beg- concat_js -->
+    <script src="js/jquery.mCustomScrollbar.min.js"></script>
+    <script src="js/chat.js"></script>
+    <!-- //-end- concat_js -->
+    <!-- Add fancyBox -->
+    <script type="text/javascript" src="./fancybox/jquery.browser.min.js"></script>
+    <script type="text/javascript" src="./fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+    <script type="text/javascript">
+        //<![CDATA[
+        function resize() {
+            var heights = window.innerHeight;
+            var widths = window.innerWidth;
+            if (widths < 308) {
+                var newHeight = heights - 46;
+                document.getElementById("history_div").style.height = newHeight + "px";
+            } else if (widths < 650) {
+                var newHeight = heights - 56;
+                document.getElementById("history_div").style.height = newHeight + "px";
+            }
+
+
+            $(".output-left").each(function (i) {
+                convH = $(this).height();
+                var y = this.getElementsByTagName("img");
+                logoH = y[0].height;
+                margintop = (convH - 50) / 2;
+                y[0].setAttribute("style", "margin-top:" + margintop.toString() + "px");
+            });
+        }
+        resize();
+        window.onresize = function () {
+            resize();
+        };
+
+        //]]>
+    </script>
+</body>
+
+</html>

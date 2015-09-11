@@ -1,0 +1,31 @@
+*
+{
+	transition: all .5s ease-in;
+}
+.tagline
+{
+	color: #1d1d1d;
+	font-family: 'Teko', Arial, sans-serif;
+	text-align: center;
+	font-weight: 400;
+	font-size: 60px;
+	margin-bottom: 0;
+	margin-top: 20px;
+}
+.tagline a
+{
+	color: #1d1d1d;
+	text-decoration: none;
+}
+.tagline a:hover
+{
+	color: #f1f1f1;
+	background-color: #1e5799;
+	padding: 0 5px;
+}
+@media all and (max-width: 599px){
+	.tagline
+	{
+		font-size: 24px;
+	}
+}

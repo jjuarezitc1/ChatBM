@@ -1,0 +1,309 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Maven+Pro:500,400,700);
+body {
+    font-family: 'Maven Pro', sans-serif;
+    color: #555;
+    min-width: 180px;
+    height: 100%
+}
+
+span.experto.txt {
+    vertical-align: middle;
+}
+/* STRUCTURE */
+
+#pagewrap {
+    width: 650px;
+    height: 400px;
+    margin: 20px auto;
+    /*background-image: url(../img/bitmap.png);*/
+
+    background-repeat: no-repeat;
+}
+
+header {
+    height: 35px;
+    padding: 0 0px;
+
+}
+
+#banner,#content {
+    width: 138px;
+    height: 328px;
+    float: left;
+    padding: 5px 15px;
+}
+
+#middle {
+    width: 294px;
+    /* Account for margins + border values */
+
+    float: left;
+    padding: 5px 15px;
+    margin: 0px 5px 5px 5px;
+}
+
+#sidebar {
+    width: 478px;
+    height: 338px;
+    float: left;
+}
+
+footer {
+    height: 21px;
+    clear: both;
+    padding: 0 15px;
+    background-color: #8c1c8e;
+}
+
+#banner, #content {
+    /*	background: #f8f8f8;*/
+}
+
+#sidebar {
+    /*	background: #f0efef;*/
+}
+
+header,
+#banner, #content,
+#middle,
+#sidebar {
+    /*	margin-bottom: 5px;*/
+}
+
+#pagewrap,
+header,
+#banner, #content,
+#banner,
+#sidebar,
+footer {
+    border: solid 1px #000;
+}
+
+.experto {
+    width: auto;
+    height: 82px;
+    line-height: 1.0;
+    font-weight: 700;
+/*    padding: 41px 0px;*/
+}
+
+.experto:hover {
+    cursor: pointer;
+    border: 1px solid #912A8D;
+}
+
+.purple {
+    color: #bf07bf;
+    pointer-events: none;
+    background-color: rgba(191, 7, 191, 0.05);
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.blink {
+    -webkit-animation: blink 1s ease-in-out 0s 3 alternate;
+    -moz-animation: blink 1s ease-in-out 0s 3 alternate;
+    -o-animation: blink 1s ease-in-out 0s 3 alternate;
+}
+
+.cargando {
+    pointer-events: none;
+}
+
+.experto-txt {
+    padding: 0px 0px 0px 12px;
+    position: fixed;
+    width: 80px;
+    height: 82px;
+}
+
+.experto-img {
+    height: 40px;
+    width: 40px;
+    margin: 20px 0px 0px 11px;
+}
+
+.vmiddle {
+    vertical-align: middle;
+}
+
+.experto-table {
+    width: 100%;
+    height: 100%;
+}
+
+.chat {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    overflow: hidden;
+}
+
+#soporte-img.purple {
+    src: url(img/soporte-p.png);
+}
+
+#general-img.purple {
+    src: url(img/soporte-p.png);
+}
+
+#ahorro-img.purple {
+    src: url(img/ahorro-p.png);
+}
+
+#productos-img.purple {
+    src: url(img/productos-p.png);
+}
+
+#creditos-img.purple {
+    src: url(img/creditos-p.png);
+}
+
+/*j*/
+#imgVideo{
+    width: 75px;
+    margin-top: 10%;
+}
+
+#tituloTutorial{
+    color:white;
+    margin-top:1px;
+    text-decoration: none;
+}
+
+#tituloTutorial a:hover, a:visited, a:link, a:active{
+    text-decoration: none;
+}
+
+/************************************************************************************
+MEDIA QUERIES
+*************************************************************************************/
+
+@media screen and (max-width: 650px) {
+    html {
+        position: relative;
+        min-height: 100%;
+    }
+    body {
+        height: 100%;
+        margin: 0 0 23px;
+    }
+    header {
+        height: auto;
+    }
+    footer {
+        width: auto;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 23px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    #banner,#content {
+        padding: 0px;
+        height: auto;
+        width: auto;
+        float: none;
+    }
+    #banner{
+        width: 100%;
+        height: 70px;
+        float: none;
+    }
+    #imgVideo{
+        width: 50px;
+        margin-top: 10px;
+    }
+    #sidebar {
+        width: auto;
+        float: none;
+    }
+    #pagewrap {
+        margin: 0px;
+        width: auto;
+        height: 100%;
+    }
+    .experto {
+        display: inline-block;
+        width: 24%;
+        height: auto;
+        margin: 0% auto;
+        box-sizing: border-box;
+    }
+    .experto-img {
+        height: 30px;
+        width: 30px;
+        margin: 0px auto;
+        display: block;
+    }
+    .experto-txt {
+        padding: 0px;
+        position: relative;
+        height: auto;
+        width: auto;
+    }
+    #chat {}
+    .vmiddle{height: 36px; text-align: center}
+}
+
+@media screen and (max-width: 324px) {
+    #pagewrap {
+        height: 100%
+    }
+    .experto-txt {
+        display: none;
+    }
+    .experto {
+        padding: 0px;
+        width: 23%;
+        padding: 0px 6%;
+        box-sizing: border-box;
+    }
+}
+
+#banner {
+    position: absolute;
+    background-color: #442243;
+    z-index: 100;
+    text-align: center;
+}
+
